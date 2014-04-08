@@ -6,6 +6,7 @@
 	cm = commit -m
 	fix = commit --amend
 	up = pull
+	dis = diff --staged
 	p = push
 	pom = push origin master
 	pog = push origin gh-pages

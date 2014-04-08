@@ -14,6 +14,8 @@ curl -L https://get.rvm.io | bash -s stable --ruby
 # TODO: I think i'd rather curl down the nave.sh, symlink it into /bin and use that for initial node install.
 #npm install -g nave
 sudo npm install -g nvm
+nvm install 0.10
+nvm alias default 0.10
 
 # Install a few high-use Node modules globally
 sudo npm install -g grunt-cli bower node-inspector

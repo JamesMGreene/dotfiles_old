@@ -24,3 +24,16 @@ export LANG="en_US"
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
+
+# Move into the dev folder by default
+cd $HOME/Development/
+
+# Load NVM
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+alias gitt=git
+alias gh=hub
+alias git=hub
+alias g=git
+alias f="find . -iname "
+alias clearx="clear; clear; echo; echo; echo; echo; echo"
