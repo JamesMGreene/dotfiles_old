@@ -1,7 +1,21 @@
 [alias]
+  undo = !git reset HEAD "$1" && git co -- "$1"
+  br = branch
+  co = checkout
 	c = commit -am
+	cm = commit -m
+	fix = commit --amend
 	up = pull
 	p = push
+	pom = push origin master
+	pog = push origin gh-pages
+	pum = push upstream master
+	pug = push upstream gh-pages
+	urls = remote -v
+	upstream = remote set-url upstream
+	pick = cherry-pick
+	rbi = rebase --interactive
+	st = status
 	s = status -s
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -11,17 +25,17 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 [color "branch"]
-	current = yellow reverse
+	current = green reverse
 	local = yellow
-	remote = green
+	remote = red
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
 [merge]
 	log = true
@@ -40,5 +54,9 @@
 
 # Any GitHub repo with my username should be checked out r/w by default
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-[url "git@github.com:paulirish/"]
-  insteadOf = "git://github.com/paulirish/"
+[url "git@github.com:JamesMGreene/"]
+  insteadOf = "git://github.com/JamesMGreene/"
+[user]
+	name = James M. Greene
+	email = james.m.greene@gmail.com
+	url = http://jamesgreene.net/
