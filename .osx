@@ -369,6 +369,13 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
 ###############################################################################
+# Outlook                                                                     #
+###############################################################################
+
+# Disable the Outlook Auto-Discovery service that will continually bork your Exchange settings
+osascript ./disable-outlook-autodiscovery.scpt
+
+###############################################################################
 # Terminal                                                                    #
 ###############################################################################
 
