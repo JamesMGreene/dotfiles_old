@@ -5,6 +5,9 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+# Increase the OSX process limits
+ulimit -n 10240
+
 # init z   https://github.com/rupa/z
 . ~/.zsh/z.sh
 

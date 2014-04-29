@@ -376,6 +376,13 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 osascript ./disable-outlook-autodiscovery.scpt
 
 ###############################################################################
+# Process Limitations                                                         #
+###############################################################################
+
+# Increase the max number of processes that OSX can run concurrently
+ulimit -n 10240
+
+###############################################################################
 # Terminal                                                                    #
 ###############################################################################
 
