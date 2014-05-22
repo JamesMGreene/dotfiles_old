@@ -8,8 +8,10 @@
 	up = pull
 	dis = diff --staged
 	p = push
+	po = push origin
 	pom = push origin master
 	pog = push origin gh-pages
+	pu = push upstream
 	pum = push upstream master
 	pug = push upstream gh-pages
 	urls = remote -v

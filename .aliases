@@ -89,8 +89,14 @@ alias trimcopy="tr -d '\n' | pbcopy"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
+alias gitt="git"
+alias gh="hub"
+alias git="hub"
 alias g="git"
 alias v="vim"
+alias f="find . -iname "
+alias fa="find / -iname "
+alias clearx="clear; clear; echo; echo; echo; echo; echo"
 
 # File size
 alias fs="stat -f \"%z bytes\""

@@ -1,7 +1,7 @@
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
-  [ -r "$file" ] && source "$file"
+	[ -r "$file" ] && source "$file"
 done
 unset file
 
@@ -34,15 +34,6 @@ cd $HOME/Development/
 # Load NVM
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 nvm install 0.10
-nvm alias default 0.10
 nvm use 0.10.28
 nvm current
-
-# Awesome aliases
-alias gitt=git
-alias gh=hub
-alias git=hub
-alias g=git
-alias f="find . -iname "
-alias fa="find / -iname "
-alias clearx="clear; clear; echo; echo; echo; echo; echo"
+clear
