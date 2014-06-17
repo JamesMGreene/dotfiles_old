@@ -2,7 +2,7 @@
   undo = !git reset HEAD "$1" && git co -- "$1"
   br = branch
   co = checkout
-	c = commit -am
+	cam = commit -am
 	cm = commit -m
 	fix = commit --amend
 	up = pull
@@ -20,6 +20,7 @@
 	rbi = rebase --interactive
 	st = status
 	s = status -s
+	rms = "!f(){ git rm --cached \"$1\";rm -r \"$1\";git config -f .gitmodules --remove-section \"submodule.$1\";git config -f .git/config --remove-section \"submodule.$1\";git add .gitmodules; }; f"
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [color]
