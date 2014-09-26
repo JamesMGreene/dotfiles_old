@@ -19,10 +19,15 @@
 	pick = cherry-pick
 	rbi = rebase --interactive
 	st = status
-	s = status -s
+	s = status -sb
 	rms = "!f(){ git rm --cached \"$1\";rm -r \"$1\";git config -f .gitmodules --remove-section \"submodule.$1\";git config -f .git/config --remove-section \"submodule.$1\";git add .gitmodules; }; f"
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	pushbr = push -u origin HEAD
+	delete-unused-branches = "!f() { git branch | xargs git branch -d; }; f"
+	brdiff = "!f() { git rev-list ..$1 --oneline | sed -e '1 iOnly in other:'; git rev-list $1.. --oneline | sed -e '1 iOnly in HEAD:'; }; f"
+	ls = ls-files
+	rev = merge --no-ff --no-commit
 [color]
 	ui = always
 [core]
@@ -43,6 +48,9 @@
 	untracked = cyan
 [merge]
 	log = true
+[push]
+	default = simple
+
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -63,4 +71,4 @@
 [user]
 	name = James M. Greene
 	email = james.m.greene@gmail.com
-	url = http://jamesgreene.net/
+	url = http://greene.io/
